@@ -1,0 +1,29 @@
+[
+    {
+      "name": "${ container_name }",
+      "image": "${ image_name }",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": ${ container_port },
+          "hostPort": ${ host_port }
+        }
+      ],
+      "environment": [
+        {
+            "name": "ENVIRONMENT",
+            "value": "dev"
+        }
+      ],
+      
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${ ProjectName }-${ servicename }-${ environment }",
+          "awslogs-region": "${ region }",
+          "awslogs-stream-prefix": "${ container_name }-log"
+        }
+      }
+    }
+  ]
+  
