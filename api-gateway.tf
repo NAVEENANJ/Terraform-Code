@@ -33,7 +33,7 @@ resource "aws_api_gateway_integration" "test" {
   http_method = aws_api_gateway_method.MyDemoMethod.http_method
 
   type                    = "HTTP_PROXY"
-  uri                     = "http://demo-alb-test-1006012731.ap-south-1.elb.amazonaws.com/api/data"
+  uri                     = "http://demo-alb-test-129220131.ap-south-1.elb.amazonaws.com/api/data"
   integration_http_method = "GET"
 }
 
